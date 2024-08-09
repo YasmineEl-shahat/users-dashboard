@@ -1,0 +1,19 @@
+<app-header (search)="handleSearch($event)"></app-header>
+
+<div class="user-list">
+  <div
+    class="user-card"
+    *ngFor="let user of filteredUsers"
+    [@cardAnimation]
+    (click)="goToUserDetail(user.id)"
+  >
+    <img [src]="user.avatar" alt="{{ user.first_name }} {{ user.last_name }}" />
+    <div>{{ user.first_name }} {{ user.last_name }}</div>
+  </div>
+  <mat-paginator
+    [length]="totalUsers"
+    [pageSize]="6"
+    (page)="onPageChange($event)"
+  >
+  </mat-paginator>
+</div>

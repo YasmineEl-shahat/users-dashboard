@@ -1,0 +1,21 @@
+<div *ngIf="user" class="user-detail">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="goBack()"
+    class="back-button"
+  >
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <div class="user-info">
+    <img
+      [src]="user.avatar"
+      alt="{{ user.first_name }} {{ user.last_name }}"
+      class="user-avatar"
+    />
+    <div class="user-details">
+      <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+      <p>Email: {{ user.email }}</p>
+    </div>
+  </div>
+</div>

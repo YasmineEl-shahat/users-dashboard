@@ -1,0 +1,10 @@
+<header>
+  <mat-toolbar color="primary" class="toolbar">
+    <span class="title">User Dashboard</span>
+    <span class="spacer"></span>
+    <mat-form-field appearance="fill" class="search-field">
+      <mat-label>Search by Name</mat-label>
+      <input matInput (input)="onSearch($event)" />
+    </mat-form-field>
+  </mat-toolbar>
+</header>
